@@ -39,7 +39,7 @@ You can add `data-shift` attribute to the popup block to turn on or off the vert
 ```
 
 <br/>
-Now you just need to initialize енру library.
+Now you just need to initialize the library.
 ```javascript
 $(function(){
   popuper.init();
