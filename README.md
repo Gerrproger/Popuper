@@ -14,12 +14,14 @@ Include the relevant files in the `<head>` of your document:
 <script type="text/javascript" src="js/popuper.js"></script>
 ```
 
+<br/>
 Add class `popuper` to the activation link. 
 Also add `data-target` attribute that includes `id` of the popup.
 ```html
 <a href="#" class="popuper" data-target="myPopup">Open popup</a>
 ```
 
+<br/>
 Add class `popup` to the popup block and don't forget `id`.
 ```html
 <div id="myPopup" class="popup">
@@ -28,6 +30,7 @@ Add class `popup` to the popup block and don't forget `id`.
 ```
 Also you can insert link with the `popup-closer` class whitch will close this popup on click.
 
+<br/>
 You can add `data-shift` attribute to the popup block to turn on or off the vertical shift (default is `true`).
 ```html
 <div id="myPopup" class="popup" data-shift="false">
@@ -35,6 +38,7 @@ You can add `data-shift` attribute to the popup block to turn on or off the vert
 </div>
 ```
 
+<br/>
 Now you just need to initialize енру library.
 ```javascript
 $(function(){
@@ -60,7 +64,7 @@ Opens popup with the passed `id`.
 Note that you first need to initialize the library!
 
 ### close
-This method will close all popups
+This method will close all popups.
 ```javascript
   popuper.close();
 ```
