@@ -28,7 +28,7 @@ open: function(id, shift, scroll, noclose){
 	        $('<div class="popup-layout"></div>').click(function(){
 			    self.close();
 		    }).appendTo('body').fadeIn(100);
-        } console.log(111, shift, scroll);
+        }
         if(shift != false) el.css('margin-top', Math.ceil(el.height()/2)*-1);
         if(!(self.opened && noclose)) el.fadeIn(100);
         if(scroll == true) $('html, body').animate({scrollTop: el.offset().top-100}, 300);
