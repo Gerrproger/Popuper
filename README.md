@@ -22,7 +22,7 @@ Also add `data-target` attribute that includes `id` of the popup.
 ```
 
 <br/>
-Add class `popup` to the popup block and don't forget `id`.
+Add class `popup` to the popup block and don't forget an `id`.
 ```html
 <div id="myPopup" class="popup">
    <a href="#" class="popup-closer"></a>
@@ -38,6 +38,21 @@ You can add `data-shift` attribute to the popup block to turn on or off the vert
 </div>
 ```
 
+You can add `data-scroll` attribute to the popup block to enable automatic scrolling to the popup location (default is `false`).
+```html
+<div id="myPopup" class="popup" data-scroll="true">
+   <a href="#" class="popup-closer"></a>
+</div>
+```
+
+You can add `data-noclose` attribute to the popup block to not hide previosly opened popup (default is `false`).
+```html
+<div id="myPopup" class="popup" data-noclose="true">
+   <a href="#" class="popup-closer"></a>
+</div>
+```
+
+
 <br/>
 Now you just need to initialize the library.
 ```javascript
@@ -51,15 +66,20 @@ $(function(){
 ### init
 Use this to initialize or reinitialize the library. It will automatically find all aactivation links.
 ```javascript
-  popuper.init('myPopup', false);
+  popuper.init('myPopup', false, true, true);
 ```
-You can also pass parametr with an `id` of the popup to immediatly open it.
+You can also pass the parametr with an `id` of the popup to immediatly open it.
+
 Pass the second argument to set the vertical shift of the popup or not (default is `true`)
+
+Pass the third argument to enable automatic scrolling to the popup or not (default is `false`)
+
+Pass the fourth argument to close the previosly opened popup or not (default is `false`)
 
 ### open
 Opens popup with the passed `id`.
 ```javascript
-  popuper.open('myPopup', true);
+  popuper.open('myPopup', true, false, false);
 ```
 Note that you first need to initialize the library!
 
